@@ -31,15 +31,15 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="UPDATE_TYPE" value="REBASE" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
   }
-}]]></component>
+}</component>
   <component name="GithubPullRequestsUISettings">
     <option name="selectedUrlAndAccountId">
       <UrlAndAccount>
         <option name="accountId" value="4e7dc57d-7ac4-4b38-9cca-7fd8109511a9" />
-        <option name="url" value="https://github.com/youssefhergal/Produits-App.git" />
+        <option name="url" value="https://github.com/youssefhergal/Product-Management-App.git" />
       </UrlAndAccount>
     </option>
   </component>
@@ -75,7 +75,7 @@
     "WebServerToolWindowFactoryState": "false",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
-    "git-widget-placeholder": "master",
+    "git-widget-placeholder": "main",
     "last_opened_file_path": "C:/JEE/Produits App/lib",
     "list.type.of.created.stylesheet": "CSS",
     "node.js.detected.package.eslint": "true",
@@ -258,7 +258,7 @@
       <workItem from="1700953601232" duration="161000" />
       <workItem from="1700953814245" duration="42000" />
       <workItem from="1700953878855" duration="6244000" />
-      <workItem from="1701013172289" duration="5525000" />
+      <workItem from="1701013172289" duration="7609000" />
     </task>
     <servers />
   </component>
