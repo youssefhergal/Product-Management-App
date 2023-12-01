@@ -61,16 +61,60 @@ public class ProduitDaoImpl implements IProduitDao{
 
     @Override
     public Produit getProduit(Long id) {
-        return null;
+        Produit p = null;
+        Connection cn = SingletonConnection.getConnection();
+        try {
+            PreparedStatement ps = cn.prepareStatement
+                    ("SELECT * FROM produits WHERE id = ?");
+            ps.setLong(1, id);
+            ResultSet rs = ps.executeQuery();
+            if (rs.next()){
+                p = new Produit();
+                p.setId(rs.getLong("id"));
+                p.setDesignation(rs.getString("designation"));
+                p.setPrix(rs.getDouble("prix"));
+                p.setQuantite(rs.getInt("quantite"));
+            }
+        }catch (SQLException e){
+            e.printStackTrace();
+        }
+        return  p;
+
     }
 
     @Override
     public Produit UpdateProduit(Produit p) {
-        return null;
+        try {
+            Connection cn = SingletonConnection.getConnection();
+            PreparedStatement ps = cn.prepareStatement
+                    ("UPDATE  produits SET designation = ?,prix = ? , quantite  = ? WHERE id =? ");
+
+            ps.setString(1, p.getDesignation());
+            ps.setDouble(2, p.getPrix());
+            ps.setInt(3, p.getQuantite());
+            ps.setLong(4,p.getId());
+            ps.executeUpdate();
+            ps.close();
+
+        }catch (SQLException e){
+            e.printStackTrace();
+        }
+        return  p ;
     }
 
     @Override
     public void deleteProduit(Long id) {
+        try {
+            Connection cn = SingletonConnection.getConnection();
+            PreparedStatement ps = cn.prepareStatement
+                    ("DELETE FROM produits WHERE id = ?");
 
+            ps.setLong(1, id);
+            ps.executeUpdate();
+            ps.close();
+
+        }catch (SQLException e){
+            e.printStackTrace();
+        }
     }
 }

@@ -5,14 +5,14 @@
          version="4.0">
 
     <!-- Servlet Mapping -->
-    <servlet>
-        <servlet-name>ContrelleurServlet</servlet-name>
-        <servlet-class>com.youssef.produits_app.web.ContrelleurServlet</servlet-class>
-    </servlet>
-    <servlet-mapping>
-        <servlet-name>ContrelleurServlet</servlet-name>
-        <url-pattern>*.do</url-pattern>
-    </servlet-mapping>
+<!--    <servlet>-->
+<!--        <servlet-name>ContrelleurServlet</servlet-name>-->
+<!--        <servlet-class>com.youssef.produits_app.web.ContrelleurServlet</servlet-class>-->
+<!--    </servlet>-->
+<!--    <servlet-mapping>-->
+<!--        <servlet-name>ContrelleurServlet</servlet-name>-->
+<!--        <url-pattern>*.do</url-pattern>-->
+<!--    </servlet-mapping>-->
 
     <!-- Configuration JSP -->
     <jsp-config>

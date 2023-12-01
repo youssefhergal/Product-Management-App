@@ -12,14 +12,15 @@
     <title>Title</title>
     <link rel="stylesheet" href="resources/css/style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </head>
 <body>
+<%@include file="header.jsp" %>
 <div class="container">
     <div class="card text-white">
         <div class="card-header text-center bg-primary">Recherche des produits</div>
         <div class="card-body">
-            <form action="chercher.do" method="get" class="row g-2">
+            <form action="chercher.php" method="get" class="row g-2">
                 <div class="col-md-1">
                     <label for="motCle" class="form-label text-dark">Mot Cle</label>
                 </div>
@@ -38,6 +39,7 @@
                     <th>DESIGNATION</th>
                     <th>PRIX</th>
                     <th>QUANTITE</th>
+                    <th colspan="2">ACTION</th>
                 </tr>
                 </thead>
                 <tbody>
@@ -47,6 +49,9 @@
                         <td>${p.designation}</td>
                         <td>${p.prix}</td>
                         <td>${p.quantite}</td>
+                        <td><a href="supprimer.php?id=${p.id}" onclick=" return confirm('Etes vous sur')">Supprimer</a> </td>
+                        <td><a href="edit.php?id=${p.id}">Edit</a> </td>
+
                     </tr>
                 </c:forEach>
                 </tbody>
@@ -54,6 +59,7 @@
         </div>
     </div>
 </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
 
